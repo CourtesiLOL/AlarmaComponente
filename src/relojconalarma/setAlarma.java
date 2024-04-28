@@ -138,6 +138,10 @@ public class setAlarma extends javax.swing.JDialog {
         int minuto = Integer.parseInt(minutoSelector.getValue().toString());
         int segundo = Integer.parseInt(segundoSelector.getValue().toString());
         
+        
+        
+        System.out.println(LocalTime.of(hora,minuto,segundo).format(DateTimeFormatter.ofPattern("HH:mm:ss")));
+        
         padre.setTiempoAlarma(LocalTime.of(hora,minuto,segundo));
         this.dispose();
     }//GEN-LAST:event_setAlaramaBtnMouseClicked
